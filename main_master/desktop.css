@@ -1,0 +1,165 @@
+@media screen and (min-width:1200px) {
+    @keyframes go {
+        0% {
+            transform: rotateY(0deg)
+        }
+        33% {
+            transform: rotateY(120deg)
+        }
+        660% {
+            transform: rotateY(240deg)
+        }
+        100% {
+            transform: rotateY(360deg)
+        }
+    }
+    .fixed-width {
+        width: 1200px;
+        margin: auto;
+    }
+    header {
+        background-color: #383838;
+        position: fixed;
+        z-index: 1;
+    }
+    header nav div a {
+        display: block;
+        line-height: 40px;
+        transition: all .5s;
+        text-align: center;
+        padding-right: 20px;
+        padding-left: 20px;
+        margin-right: 10px;
+        margin-left: 10px;
+        height: 40px;
+        color: #ffffff;
+        text-decoration: none;
+    }
+    header nav .logo {
+        float: left;
+    }
+    header nav .login {
+        float: right;
+    }
+    header nav .search {
+        float: right;
+    }
+    header nav .class_menu ul {
+        float: right;
+    }
+    header nav .class_menu ul li {
+        list-style: none;
+        float: left;
+    }
+    header nav .class_menu ul li a:hover,
+    header nav .search:hover,
+    header nav .login:hover {
+        background-color: #919191;
+        font-size: 20px;
+    }
+    .backgroundIMG {
+        background-image: url(images/001.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .content {
+        height: 800px;
+    }
+    .content .container {
+        position: relative;
+        width: 400px;
+        height: 400px;
+        perspective: 1000px;
+        margin: auto;
+        padding-top: 15%;
+    }
+    .content .container .cude {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        animation: go 15s infinite linear;
+    }
+    .content .container .cude div {
+        opacity: 0.9;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    .content .container .cude .triangle_one {
+        /*        background-color: #f50000;*/
+        background-image: url(images/bg01.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .content .container .cude .triangle_two {
+        /*        background-color: #0000ff;*/
+        background-image: url(images/bg02.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .content .container .cude .triangle_three {
+        /*        background-color: #00ff00;*/
+        background-image: url(images/bg03.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .content .container .cude .triangle_one {
+        transform: rotateY(60deg)translateZ(300px);
+    }
+    .content .container .cude .triangle_two {
+        transform: rotateY(-60deg)translateZ(300px);
+    }
+    .content .container .cude .triangle_three {
+        transform: translateZ(-300px);
+    }
+    .middle {
+        font-size: 20px;
+        opacity: .9;
+    }
+    .middle .about {
+        text-align: center;
+        width: 480px;
+        margin: auto;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        line-height: 2em;
+        letter-spacing: 1px;
+        color: aliceblue;
+    }
+    .middle .about h1 {
+        margin-bottom: 20px;
+    }
+    .middle .col-2 {
+        display: block;
+        width: 380px;
+        line-height: 2em;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        letter-spacing: 1px;
+        color: aliceblue;
+    }
+    .middle .col-2 h1 {
+        margin-bottom: 20px;
+    }
+    .middle .col-2 h1 {
+        text-align: center;
+    }
+    .middle .col-2:nth-of-type(1) {
+        float: left;
+    }
+    .middle .col-2:nth-of-type(2) {
+        float: right;
+    }
+    footer {
+        background-color: #383838;
+    }
+    footer .bottom .copyrights {
+        font-size: 8px;
+        height: 40px;
+        color: #ffffff;
+        padding-right: 20px;
+        padding-left: 20px;
+        line-height: 40px;
+    }
+}

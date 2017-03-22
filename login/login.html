@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        fixed-width {
+            width: 1200px;
+        }
+        
+        .login {
+            opacity: .9;
+            background-image: url(images/login_bg01.jpg);
+/*            background-size: cover;*/
+/*            background-repeat: no-repeat;*/
+            height: 1350px;
+        }
+        
+        .col-1 {
+            /*            background-color: #ba2626;*/
+            width: 300px;
+            height: 250px;
+            position: relative;
+            margin: auto;
+        }
+        
+        .col-1 .login_table {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+            width: 200px;
+            height: 200px;
+        }
+        
+        .col-1 .login_table table {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+        }
+        .col-1 .login_table table th{
+            font-size: 20px;
+        }
+        
+        
+        .login_table tr td {
+            text-align: center;
+            background-color: #ffffff;
+        }
+        
+        .login .header h1 {
+            text-align: center; 
+            margin-bottom: 30px;
+        }
+        
+        .login .login_btn {
+            text-align: center;            
+        }
+        
+        .login .login_btn a {            
+            font-size: 30px;
+            text-decoration: none;
+            color: #000000;            
+        }
+        .header {
+            width: 500px;
+            margin: auto;
+            line-height: 2em;
+            letter-spacing: 1px;
+            padding-top: 200px;
+        }
+        .header p{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login fixed-width">
+        <div class="header">
+            <h1>登入ICodeTogether</h1>
+            <p>語言是了解對方的第一個步驟，先進的國家逐漸地將程式語言納為他們小孩必需學習的課程，他們從小開始接觸，程式語言不再只是個媒介，更是訓練邏輯思考重要的一環，所以程式語言已是不可避</p>
+        </div>
+        <div class="col-1">
+            <div class="login_table">
+                <table>
+                    <tr>
+                        <th>帳號</th>
+                    </tr>
+                    <tr>
+                        <td colspan="4">account</td>
+                    </tr>
+                    <tr>
+                        <th>密碼</th>
+                    </tr>
+                    <tr>
+                        <td colspan="4">password</td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+        <div class="login_btn"><a href="#">登入</a></div>
+    </div>
+
+
+
+
+
+
+</body>
+</html>

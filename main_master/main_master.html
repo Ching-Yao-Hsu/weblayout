@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="desktop.css">
+    <link rel="stylesheet" href="phone.css">
+    <link rel="stylesheet" href="ham_phone.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+
+    <script>
+        $(document).ready(function() {
+            $(".hamburger").click(function() {
+                $(".hamburger").toggleClass("hamburger-x");
+                $("header nav .class_menu ul").slideToggle();
+            });
+            $(window).resize(function() {
+                var w = $(window).width();
+                if (w > 480) {
+                    $("header nav .class_menu ul").show();
+                } else {
+                    $("header nav .class_menu ul").hide();
+                    $(".hamburger").removeClass("hamburger-x");
+                }
+            });
+
+            $("#gotop").hide();
+
+            $(window).scroll(function() {
+                var sr = $(window).scrollTop();
+                var _in = "rollIn";
+                var _out = "hinge";
+
+                if (sr > 300) {                    
+                    $("#gotop").show().removeClass(_out).addClass(_in);
+                } else {                    
+                    $("#gotop").removeClass(_in).addClass(_out);
+                }
+            });
+            $("#gotop").click(function() {
+                $("html,body").animate({
+                    scrollTop: 0
+                });
+            });
+        });
+    </script>
+
+    <style>
+        #gotop {
+            position: fixed;
+            right: 0px;
+            bottom: 0px;
+            width: 40px;
+            height: 40px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            line-height: 50px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="full-width">
+        <nav class="clearfix">
+            <div class="logo"><a href="#">LOGO</a></div>
+            <div class="login"><a href="#">登入</a></div>
+            <div class="search"><a href="#">search</a></div>
+            
+            <div class="class_menu">
+                <ul>
+                    <li><a href="#">互動學習</a></li>
+                    <li><a href="#">課程學習</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="hamburger"><span></span></div>
+    </header>
+    <div class="backgroundIMG full-width">
+        <div class="content">
+            <div class="fixed-width">
+                <div class="container">
+                    <div class="cude">
+                        <div class="triangle_one"></div>
+                        <div class="triangle_two"></div>
+                        <div class="triangle_three"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="middle full-width ">
+            <div class="fixed-width clearfix">
+                <div class="about">
+                    <div>
+                        <h1>關於我們</h1>
+                        <p>
+                            語言是了解對方的第一個步驟，先進的國家逐漸地將程式語言納為他們小孩必需學習的課程，他們從小開始接觸，程式語言不再只是個媒介，更是訓練邏輯思考重要的一環，所以程式語言已是不可避諱的趨
+                        </p>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <h1>學習課程</h1>
+                    <p>
+                        語言是了解對方的第一個步驟，先進的國家逐漸地將程式語言納為他們小孩必需學習的課程，他們從小開始接觸，程式語言不再只是個媒介，更是訓練邏輯思考重要的一環，所以程式語言已是不可避諱的趨 語言是了解對方的第一個步驟，先進的國家逐漸地將程式語言納為他們小孩必需學習的課程，他們從小開始接觸，程式語言不再只是個媒介，更是訓練邏輯思考重要的一環，所以程式語言已是不可避諱的趨
+                    </p>
+                </div>
+                <div class="col-2">
+                    <h1>互動學習</h1>
+                    <p>
+                        語言是了解對方的第一個步驟，先進的國家逐漸地將程式語言納為他們小孩必需學習的課程，他們從小開始接觸，程式語言不再只是個媒介，更是訓練邏輯思考重要的一環，所以程式語言已是不可避諱的趨 語言是了解對方的第一個步驟，先進的國家逐漸地將程式語言納為他們小孩必需學習的課程，他們從小開始接觸，程式語言不再只是個媒介，更是訓練邏輯思考重要的一環，所以程式語言已是不可避諱的趨
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="gotop" class="animated">TOP</div>
+    <footer class="clearfix">
+        <div class="bottom">
+            <div class="copyrights">
+                ICodeTogether-Team DESING &copy; 2017
+            </div>            
+        </div>
+    </footer>
+</body>
+
+</html>
