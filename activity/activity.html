@@ -23,56 +23,6 @@
         .content {
             float: left;            
         }
-        
-        
-        
-        .prompt {
-            margin: auto;
-        }
-        
-        .prompt_container{
-            display: none;
-        }
-        
-        .prompt h1{
-            text-align: center;
-        }
-        
-        .prompt .prompt_step {
-            float: left;
-        }
-        
-        .prompt_ans1 {
-            clear: both;
-            width: 600px;
-            background-color: antiquewhite;
-        }
-        
-        .prompt a {
-            text-decoration: none;
-            margin-left: 10px;
-        }
-        
-        .ans1,
-        .ans2,
-        .ans3 {
-            display: none;
-        }
-        
-        .step2,
-        .step3 {
-            display: none;
-        }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
     </style>
     <script>
         $(document).ready(function () {
@@ -87,16 +37,6 @@
                     $("." + _link).slideToggle(500);
                 }
             });
-            
-            
-            
-            
-            $(".prompt a").click(function() {
-                var _link = $(this).data("link");
-                console.log(_link);
-                $("." + _link).slideToggle(500);
-            });
-            
         });
     </script>
 </head>
@@ -120,84 +60,7 @@
                 <li><a href="#">123</a></li>
                 <li><a href="#">123</a></li>
             </ul>
-        </div>
-        
-         
-        <div class="prompt">
-        <h1><a href="#" data-link="prompt_container">DESIGN</a></h1>
-        <div class="prompt_container">
-
-            <div class="step1">
-                <div class="prompt_step">
-                    step1.請將h1設置背景顏色
-                </div>
-                <div class="prompt_btn1">
-                    <a href="#" data-link="ans1">提示</a>
-                    <a href="#" data-link="step2">下一步</a>
-                </div>
-
-                <div class="prompt_ans1">
-                    <pre class="ans1">                      
-        &lt;style&gt;
-            h1{ background-color: aqua; } 
-        &lt;/style&gt;        
-                </pre>
-                </div>
-            </div>
-
-            <div class="step2">
-                <div class="prompt_step">
-                    step2.請將h1字體設定為30px
-                </div>
-                <div class="prompt_btn2">
-                    <a href="#" data-link="ans2">提示</a>
-                    <a href="#" data-link="step3">下一步</a>
-                </div>
-                <div class="prompt_ans1">
-                    <pre class="ans2"> 
-        &lt;style&gt;
-            h1{ font-size: 30px; } 
-        &lt;/style&gt;        
-                </pre>
-                </div>
-            </div>
-
-            <div class="step3">
-                <div class="prompt_step">
-                    step3.請將寬度設為120px
-                </div>
-                <div class="prompt_btn3">
-                    <a href="#" data-link="ans3">提示</a>
-                    <a href="#">下一步</a>
-                </div>
-                <div class="prompt_ans1">
-                    <pre class="ans3"> 
-        &lt;style&gt;
-            h1{ width:120px; } 
-        &lt;/style&gt;        
-                </pre>
-                </div>
-            </div>
-
-        </div>
-    </div>
-           
-            
-             
-              
-               
-                
-                 
-                  
-                   
-                    
-                     
-                      
-                       
-                        
-                         
-                           
-       
+        </div>  
     </div>
 </body>
 
