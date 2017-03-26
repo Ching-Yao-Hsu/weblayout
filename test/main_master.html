@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="desktop.css">
+    <link rel="stylesheet" href="phone.css">
+    <link rel="stylesheet" href="ham_phone.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+    
+    <style>
+        #gotop {
+            position: fixed;
+            right: 0px;
+            bottom: 0px;
+            width: 40px;
+            height: 40px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            line-height: 50px;
+            cursor: pointer;
+            z-index: 5;
+        }
+        .aaa{
+            width: 100px;
+            margin-top: 40px;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+        }
+        .bbb{
+            margin-top: 40px;
+            margin-left: 150px;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            padding-right: 150px;
+        }
+    </style>
+    
+    <script>
+        $(document).ready(function() {
+            $(".hamburger").click(function() {
+                $(".hamburger").toggleClass("hamburger-x");
+                $("header nav .class_menu ul").slideToggle();
+            });
+            $(window).resize(function() {
+                var w = $(window).width();
+                if (w > 480) {
+                    $("header nav .class_menu ul").show();
+                } else {
+                    $("header nav .class_menu ul").hide();
+                    $(".hamburger").removeClass("hamburger-x");
+                }
+            });
+
+            $("#gotop").hide();
+
+            $(window).scroll(function() {
+                var sr = $(window).scrollTop();
+                var _in = "rollIn";
+                var _out = "hinge";
+
+                if (sr > 300) {                    
+                    $("#gotop").show().removeClass(_out).addClass(_in);
+                } else {                    
+                    $("#gotop").removeClass(_in).addClass(_out);
+                }
+            });
+            $("#gotop").click(function() {
+                $("html,body").animate({
+                    scrollTop: 0
+                });
+            });
+        });
+    </script>
+
+    
+</head>
+
+<body>
+    <header class="full-width">
+        <nav class="clearfix">
+            <div class="logo"><a href="#">LOGO</a></div>
+            <div class="login"><a href="#">登入</a></div>
+            <div class="search"><a href="#">search</a></div>
+            
+            <div class="class_menu">
+                <ul>
+                    <li><a href="#">互動學習</a></li>
+                    <li><a href="#">課程學習</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="hamburger"><span></span></div>
+    </header>
+    <iframe class="aaa" src="menu.html" frameborder="0"></iframe>
+    <iframe class="bbb" src="login.html" frameborder="0"></iframe>
+
+        
+    <div id="gotop" class="animated">TOP</div>
+    <footer class="clearfix">
+        <div class="bottom">
+            <div class="copyrights">
+                ICodeTogether-Team DESING &copy; 2017
+            </div>            
+        </div>
+    </footer>
+</body>
+
+</html>
