@@ -1,7 +1,8 @@
+html,body{
+    height: 100%;
+}
 .activity {    
-    position: fixed;
-    top: 0;
-    bottom: 0;    
+    height: 100%;  
 }
 
 .classmenu {
